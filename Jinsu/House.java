@@ -14,4 +14,4 @@ public abstract class House {
 	}
 	public abstract void taxes();
 	public abstract void cook();
-}
+}//jjjjjj
