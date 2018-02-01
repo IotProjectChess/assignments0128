@@ -1,6 +1,9 @@
 package chess;
 
 public class Rook extends Pin {
+
+	boolean[] flag = {true,true,true,true};
+
 	Rook(){}
 	Rook(int x, int y){
 		super(x, y);
@@ -8,12 +11,40 @@ public class Rook extends Pin {
 
 	@Override
 	void canmove() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("룩 이동가능한 곳은 : ");
+
+		for(int i=1; i<=7; i++) {
+
+			rookmove(i,0,0);
+			rookmove(-i,0,1);
+			rookmove(0,i,2);
+			rookmove(0,-i,3);
+
+
+		}
 	}
-//룩은 적을 뛰어 넘을 수 없고 옆으로 이동할 수 없으며,
-//앞, 뒤로만 이동이 가능해요 이동하는 칸의 수는 상관없습니다
 
 
+	private void rookmove(int mx, int my, int f) {
 
+		int x = getX() + mx;
+		int y = getY() + my;
+
+		if(flag[f]==true) {
+			if((x < 0) || (y < 0) || (x > 7) || (y > 7)) {
+				flag[f] = false;
+			}
+			else {
+				if(Chess.board[x][y]/10 == 0) {
+					System.out.println("board["+x+"]["+y+"]");
+				}
+				else{
+					if(Chess.board[x][y]/10 == 2) {
+						System.out.println("board["+x+"]["+y+"] --상대편말을먹을수있음");
+					}
+					flag[f] = false;
+				}
+			}
+		}
+	}
 }

@@ -3,13 +3,17 @@ package chess;
 public abstract class Pin {
 	private int x;
 	private int y;
-	
+
 	abstract void canmove();
 	Pin(){}
 	Pin(int x, int y){
 		this.setX(x);
 		this.setY(y);
 	}
+	
+	
+	
+	
 	public int getX() {
 		return x;
 	}
@@ -22,6 +26,6 @@ public abstract class Pin {
 	public void setY(int y) {
 		this.y = y;
 	}
-	
-	
+
+
 }

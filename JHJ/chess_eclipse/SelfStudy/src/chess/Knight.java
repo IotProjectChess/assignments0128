@@ -8,41 +8,31 @@ public class Knight extends Pin {
 
 	@Override
 	void canmove() {
-		// TODO Auto-generated method stub
-//말을 뛰어넘어다님
-//상하좌우중 한칸전진후 대각선한컨
-		int x;
-		int y;
+		System.out.println("나이트가 이동가능한 곳은 : ");
+		knightmove(2,1);
+		knightmove(2,-1);
+		knightmove(-2,1);
+		knightmove(-2,-1);
+		knightmove(1,2);
+		knightmove(1,-2);
+		knightmove(-1,2);
+		knightmove(-1,-2);
+	}
+
+
+	private void knightmove(int xm, int ym) {
 		
-		x = getX() + 2;
-		y = getY() + 1;
-		
+		int x = getX() + xm;
+		int y = getY() + ym;
+
 		if((x < 0) || (y < 0) || (x > 7) || (y > 7)) {}
 		else {
 			if(Chess.board[x][y]/10 == 0) {
 				System.out.println("board["+x+"]["+y+"]");
 			}
-			else {
-				//적과 아군이 있을때
-				
-				
-				
+			else if(Chess.board[x][y]/10 == 2) {
+				System.out.println("board["+x+"]["+y+"] --상대편말을먹을수있음");
 			}
-			
-//			
-//			if(Chess.board[getX()+i][getY()+i]/10 == 0) {
-//				System.out.println("board["+(getX()+i)+"]["+(getY()+i)+"]");
-//			}
-//			else{
-//				if(Chess.board[getX()+i][getY()+i]/10 == 2) {
-//					System.out.println("board["+(getX()+i)+"]["+(getY()+i)+"] --상대편말을먹을수있음");
-//				}
-//				flag[0] = false;
-//			}
-//			
-//			
-			
-			
 		}
 	}
 }
