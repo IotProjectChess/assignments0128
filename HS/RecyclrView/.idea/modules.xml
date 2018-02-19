@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RecyclrView.iml" filepath="$PROJECT_DIR$/RecyclrView.iml" />
+      <module fileurl="file://C:\eclipse\JHJ_HW\HS\RecyclrView\RecyclrView.iml" filepath="C:\eclipse\JHJ_HW\HS\RecyclrView\RecyclrView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\eclipse\JHJ_HW\HS\RecyclrView\app\app.iml" filepath="C:\eclipse\JHJ_HW\HS\RecyclrView\app\app.iml" />
     </modules>
   </component>
 </project>
